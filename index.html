@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 500px;
+      height: 500px;
+      background-color: #88b04b;
+      border-radius: 10px;
+      margin-top: 150px;
+      position: relative;
+    }
+
+    h1 {
+      position: absolute;
+      left: 119px;
+      margin-top: 25px;
+    }
+
+    .addition {
+      width: 100px;
+      height: 50px;
+      background-color: green;
+      border: 2px solid black;
+      border-radius: 10px;
+      position: absolute;
+      left: 200px;
+      top: 90px;
+      color:azure;
+    }
+
+    .subtract {
+      width: 100px;
+      height: 50px;
+      background-color: red;
+      border: 2px solid black;
+      border-radius: 10px;
+      position: absolute;
+      left: 200px;
+      top: 230px;
+      color:azure;
+    }
+
+    .reset {
+      width: 100px;
+      height: 50px;
+      background-color: #ff7b25;
+      border: 2px solid blue;
+      border-radius: 10px;
+      position: absolute;
+      left: 200px;
+      top: 300px;
+      font-size: 24px;
+      color:azure;
+    }
+
+    #result {
+      position: absolute;
+      left: 245px;
+      top: 180px;
+    }
+  </style>
+  <title>Counter</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>This is a counter</h1>
+    <button class='addition' onclick="addition()"> + </button>
+    <button class='subtract' onclick="subtract()"> - </button>
+    <button class='reset' onclick="reset()"> reset </button>
+
+    <span id="result">0</span>
+
+  </div>
+
+  <script>
+    let result = 0;
+    function addition() {
+      result += 1;
+      let addObj = document.getElementById("result");
+      // console.log(addObj);
+      addObj.innerHTML = result;
+    }
+
+    function subtract() {
+      result -= 1;
+      let subObj = document.getElementById("result");
+      subObj.innerHTML = result;
+    }
+
+    function reset() {
+      result = 0;
+      let resetObj = document.getElementById("result");
+      resetObj.innerHTML = result;
+    }
+
+  </script>
+</body>
+
+</html>
